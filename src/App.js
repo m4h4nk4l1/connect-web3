@@ -9,14 +9,8 @@ function App() {
 
   const [walletAddress, setWalletAddress] = useState("");
 
-  // Helper Functions
-
-  // Requests access to the user's META MASK WALLET
-  // https://metamask.io
   async function requestAccount() {
     console.log('Requesting account...');
-
-    // ❌ Check if Meta Mask Extension exists 
     if(window.ethereum) {
       console.log('detected');
 
@@ -50,8 +44,8 @@ function App() {
         
         onClick={requestAccount}
         
-        >Request Account</button>
-        <h3>Wallet Address: {walletAddress}</h3>
+        >CONNECT YOUR WALLET</button>
+        <h3>Your Wallet Address: {walletAddress}</h3>
       </header>
     </div>
   );
